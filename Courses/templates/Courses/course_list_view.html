@@ -1,0 +1,15 @@
+{% extends 'Courses/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h2>Courses available</h2>
+    {% for course in courses %}
+        {{ course.course_title }}---{{ course.course_code }}
+        <br/><br/>
+    {% empty %}
+        <h3>No courses are available</h3>
+    {% endfor %}
+{% endblock %}

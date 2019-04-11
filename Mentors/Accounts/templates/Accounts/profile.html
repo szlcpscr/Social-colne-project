@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Profile</h1>
+    <p>Username: {{ user }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a href="{% url 'Accounts:edit_profile' %}" class="btn btn-secondary btn-lg active" role="button">Edit Profile</a>
+    <a href="#" class="btn btn-secondary btn-lg active" role="button">Build CV</a>
+    <a href="{% url 'Accounts:change_password' %}" class="btn btn-secondary btn-lg active" role="button">Change Password</a>
+
+</div>
+{% endblock %}
